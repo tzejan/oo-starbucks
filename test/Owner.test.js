@@ -20,6 +20,6 @@ describe("Owner", () => {
     owner.createOrder(item, customerName);
 
     expect(owner.orders).toHaveLength(1);
-    expect(owner.orders[0]).toEqual(order); // breaks the Dependency Inversion Principle
+    expect(owner.orders).toContainEqual(order);
   });
 });
